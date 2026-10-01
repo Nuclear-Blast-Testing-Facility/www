@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-facility-950 text-slate-200 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen overflow-x-hidden;
+    background-image: 
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(0, 240, 255, 0.08), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 50% 110%, rgba(230, 57, 70, 0.06), transparent 70%),
+      linear-gradient(to bottom, #04070d, #070c15 50%, #04070d 100%);
+  }
+}
+
+.tactical-card {
+  background: rgba(9, 14, 24, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactical-card:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 15px 35px -10px rgba(0, 240, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.rebel-card {
+  background: rgba(26, 8, 8, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rebel-card:hover {
+  border-color: rgba(230, 57, 70, 0.45);
+  box-shadow: 0 15px 35px -10px rgba(230, 57, 70, 0.2);
+  transform: translateY(-2px);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.6);
+}
+
+.glow-amber {
+  text-shadow: 0 0 16px rgba(255, 183, 3, 0.6);
+}
+
+.glow-red {
+  text-shadow: 0 0 16px rgba(255, 42, 95, 0.6);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #04070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d2c44;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}

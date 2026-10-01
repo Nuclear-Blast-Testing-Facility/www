@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#04070d"/>
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#ff2a5f" stroke-width="2.5" opacity="0.4"/>
+  <circle cx="50" cy="50" r="36" fill="none" stroke="#00f0ff" stroke-width="3" stroke-dasharray="12 6"/>
+  <circle cx="50" cy="50" r="12" fill="#ffb703"/>
+  <!-- Nuclear trefoil blade shapes -->
+  <path d="M50 16 C44 26 42 34 50 38 C58 34 56 26 50 16 Z" fill="#00f0ff"/>
+  <path d="M21 68 C27 58 35 57 39 65 C36 73 28 75 21 68 Z" fill="#00f0ff"/>
+  <path d="M79 68 C72 75 64 73 61 65 C65 57 73 58 79 68 Z" fill="#00f0ff"/>
+</svg>
