@@ -4177,7 +4177,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "33104e0f-60e5-4467-b837-132fae6afac6",
+    "buildId": "5733bdc2-f627-46f8-b056-728c9849bdda",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4206,7 +4206,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "siteUrl": "https://web.nbtf.ca"
+    "siteUrl": "https://www.nbtf.ca"
   },
   "redisUrl": "",
   "upstashRedisRestUrl": "",

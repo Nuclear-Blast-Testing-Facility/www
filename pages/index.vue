@@ -33,7 +33,7 @@
             <div class="flex items-center gap-2">
               <span class="font-display text-xl font-bold tracking-wider text-white">NBTF.CA</span>
               <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                MASTER DOSSIER
+                MASTER REFERENCE
               </span>
             </div>
             <span class="text-[11px] text-slate-400 font-mono hidden sm:inline-block">Nuclear Blast Testing Facility</span>
@@ -47,18 +47,18 @@
           <a href="#reactor" class="hover:text-cyan-400 transition-colors">Reactor & Core</a>
           <a href="#keycards" class="hover:text-cyan-400 transition-colors">Keycards</a>
           <a href="#locations" class="hover:text-cyan-400 transition-colors">Locations</a>
-          <a href="#lore" class="hover:text-cyan-400 transition-colors">Lore & Mirrors</a>
+          <a href="#lore" class="hover:text-cyan-400 transition-colors">Official Lore</a>
           <a href="#gamepasses" class="hover:text-cyan-400 transition-colors">Gamepasses</a>
         </nav>
 
         <!-- CTAs -->
         <div class="flex items-center gap-3">
           <a
-            href="https://index.nbtf.ca"
+            href="https://discord.gg/nbtf"
             target="_blank"
-            class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-facility-800 hover:bg-facility-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono transition-colors"
           >
-            <span>Directory</span>
+            <span>Discord</span>
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
               <polyline points="15 3 21 3 21 9"></polyline>
@@ -82,7 +82,7 @@
     <main class="flex-1">
       <!-- HERO SECTION -->
       <section id="hero" class="relative py-16 md:py-24 overflow-hidden border-b border-slate-800/80">
-        <!-- Ambient lighting & background decoration -->
+        <!-- Ambient lighting -->
         <div class="absolute inset-0 pointer-events-none">
           <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div class="absolute bottom-10 right-10 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
@@ -115,26 +115,24 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
-              <span>Launch Experience (Roblox)</span>
+              <span>Launch Roblox Game</span>
             </a>
             <a
-              href="#roles"
-              class="px-6 py-3.5 rounded-xl bg-facility-850 hover:bg-facility-800 text-slate-100 border border-slate-700/80 hover:border-cyan-500/50 flex items-center gap-2 transition-all"
+              href="https://discord.gg/nbtf"
+              target="_blank"
+              class="px-6 py-3.5 rounded-xl bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 border border-indigo-500/50 flex items-center gap-2 transition-all"
             >
-              <span>Explore All 28 Roles</span>
-              <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <span>Official Discord (Factions)</span>
+              <svg class="w-4 h-4 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
             </a>
             <a
-              href="#reactor"
-              class="px-6 py-3.5 rounded-xl bg-rebel-900/60 hover:bg-rebel-800/80 text-rose-300 border border-red-500/40 flex items-center gap-2 transition-all"
+              href="#roles"
+              class="px-6 py-3.5 rounded-xl bg-facility-850 hover:bg-facility-800 text-slate-100 border border-slate-700/80 hover:border-cyan-500/50 flex items-center gap-2 transition-all"
             >
-              <span>Reactor Simulator</span>
-              <svg class="w-4 h-4 text-rose-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
+              <span>28 Roles Database</span>
             </a>
           </div>
 
@@ -143,12 +141,12 @@
             <div class="tactical-card p-4 rounded-xl">
               <span class="text-xs text-slate-400">TOTAL VISITS</span>
               <p class="text-2xl sm:text-3xl font-bold font-display text-cyan-400 mt-1">{{ siteData.stats.visits }}</p>
-              <span class="text-[11px] text-slate-500">Official Roblox counter</span>
+              <span class="text-[11px] text-slate-500">Roblox counter</span>
             </div>
             <div class="tactical-card p-4 rounded-xl">
               <span class="text-xs text-slate-400">APPROVAL RATING</span>
               <p class="text-2xl sm:text-3xl font-bold font-display text-emerald-400 mt-1">{{ siteData.stats.positiveRating }}</p>
-              <span class="text-[11px] text-slate-500">Player recommendation</span>
+              <span class="text-[11px] text-slate-500">Positive votes</span>
             </div>
             <div class="tactical-card p-4 rounded-xl">
               <span class="text-xs text-slate-400">SPECIALIZED ROLES</span>
@@ -156,9 +154,9 @@
               <span class="text-[11px] text-slate-500">Across 9 branches</span>
             </div>
             <div class="tactical-card p-4 rounded-xl">
-              <span class="text-xs text-slate-400">CORE FACTIONS</span>
-              <p class="text-xl sm:text-2xl font-bold font-display text-rose-400 mt-1 truncate">Pyrowh / Rebel</p>
-              <span class="text-[11px] text-slate-500">Facility vs Resistance</span>
+              <span class="text-xs text-slate-400">SECURITY CONTRACTOR</span>
+              <p class="text-lg sm:text-xl font-bold font-display text-rose-400 mt-1 truncate">{{ siteData.stats.securityContractor }}</p>
+              <span class="text-[11px] text-slate-500">Official developer canon</span>
             </div>
           </div>
         </div>
@@ -168,9 +166,9 @@
       <section id="sides" class="py-16 bg-facility-950/60 border-b border-slate-800/80">
         <div class="container mx-auto px-4 max-w-6xl">
           <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">The Two Sides</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">The Core Dynamic</span>
             <h2 class="text-3xl sm:text-4xl font-display font-black text-white uppercase mt-1">
-              Facility vs Sharlach Resistance
+              Facility vs Rebellion
             </h2>
             <p class="text-slate-400 text-sm mt-2">
               NBTF revolves around two opposing gameplay objectives: maintaining the nuclear simulation or initiating catastrophic reactor sabotage.
@@ -186,7 +184,7 @@
                 </span>
                 <span class="text-xs font-mono text-cyan-400">STATUS: DEFENDING</span>
               </div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">The Facility (Pyrowh)</h3>
+              <h3 class="text-2xl font-display font-bold text-white uppercase">The Facility</h3>
               <p class="text-slate-300 text-sm mt-2 leading-relaxed">
                 The Facility side maintains and protects NBTF, operating the reactor, conducting weapons launches, and securing the perimeter against hostile incursions.
               </p>
@@ -222,13 +220,13 @@
             <div class="rebel-card rounded-2xl p-6 sm:p-8 border-red-500/30 relative overflow-hidden">
               <div class="flex items-center justify-between mb-4">
                 <span class="px-3 py-1 rounded-md bg-red-500/20 text-red-300 font-mono text-xs font-bold uppercase border border-red-500/40">
-                  {{ siteData.stats.resistance }}
+                  The Rebellion
                 </span>
                 <span class="text-xs font-mono text-red-400">STATUS: INFILTRATING</span>
               </div>
-              <h3 class="text-2xl font-display font-bold text-white uppercase">The Rebellion (Sharlach)</h3>
+              <h3 class="text-2xl font-display font-bold text-white uppercase">The Rebellion</h3>
               <p class="text-slate-300 text-sm mt-2 leading-relaxed">
-                The Sharlach Resistance attempts to penetrate the facility, obtain code fragments from terminals, disable reactor safety protocols, and trigger a nuclear explosion.
+                The Rebellion attempts to penetrate the facility, obtain code fragments from terminals, disable reactor safety protocols, and trigger a nuclear explosion.
               </p>
 
               <div class="mt-6 space-y-3 font-mono text-xs text-slate-300">
@@ -252,7 +250,7 @@
                   </li>
                   <li class="flex items-center gap-2">
                     <span class="text-red-400">&bull;</span>
-                    <span>Commanded by banished Supreme Council Warlords & impeached Overseers</span>
+                    <span>Funded by contractor Nevlar Arms</span>
                   </li>
                 </ul>
               </div>
@@ -407,15 +405,9 @@
                 </div>
               </div>
 
-              <!-- Bottom Equipment & Lore Mirror -->
-              <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
-                <div v-if="role.equipment && role.equipment.length" class="text-slate-400 truncate max-w-[200px]">
-                  <span class="text-slate-500">GEAR:</span> {{ role.equipment.join(', ') }}
-                </div>
-                <div v-if="role.mirrorRole" class="text-slate-400">
-                  <span class="text-slate-500">MIRROR:</span>
-                  <span class="text-cyan-300 ml-1">{{ role.mirrorRole }}</span>
-                </div>
+              <!-- Bottom Equipment -->
+              <div v-if="role.equipment && role.equipment.length" class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-400 truncate">
+                <span class="text-slate-500">GEAR:</span> {{ role.equipment.join(', ') }}
               </div>
             </div>
           </div>
@@ -617,8 +609,8 @@
             </div>
             <div class="rebel-card p-4 rounded-xl border-red-500/40">
               <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-bold uppercase">Rebel Card</span>
-              <h4 class="text-sm font-bold text-white mt-2">Sharlach Resistance</h4>
-              <p class="text-slate-400 text-[11px] mt-1">Rebel base hideout, hidden cave, rebel gas station, hacked bypass doors.</p>
+              <h4 class="text-sm font-bold text-white mt-2">Rebel Forces</h4>
+              <p class="text-slate-400 text-[11px] mt-1">Rebel base hideout, hidden cave, rebel gas station, bypassed doors.</p>
             </div>
             <div class="tactical-card p-4 rounded-xl border-amber-400/40">
               <span class="px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 font-bold uppercase">🚀 Launch Keycard</span>
@@ -674,44 +666,65 @@
         </div>
       </section>
 
-      <!-- LORE & ROLE MIRRORS -->
+      <!-- OFFICIAL LORE & COMMUNITY FACTIONS -->
       <section id="lore" class="py-16 border-b border-slate-800/80">
         <div class="container mx-auto px-4 max-w-6xl">
           <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400">Faction Lore</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400">Developer Canon</span>
             <h2 class="text-3xl sm:text-4xl font-display font-black text-white uppercase mt-1">
-              Lore & The Role Mirror System
+              Official Lore
             </h2>
             <p class="text-slate-400 text-sm mt-2">
-              Many Facility positions have direct ideological and tactical rebel counterparts.
+              {{ siteData.officialLore.developerNotice }}
             </p>
           </div>
 
-          <div class="tactical-card rounded-2xl p-6 sm:p-8 border-indigo-500/30 max-w-4xl mx-auto mb-8">
-            <h3 class="text-xl font-display font-bold text-white uppercase mb-2">The Pyrowh — Sharlach Conflict</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              {{ siteData.loreOverview.backstory }}
-            </p>
+          <!-- Official Facts Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-10 font-mono text-xs">
+            <div
+              v-for="(fact, idx) in siteData.officialLore.facts"
+              :key="fact.id || idx"
+              class="tactical-card p-5 rounded-xl border-indigo-500/30 space-y-2"
+            >
+              <div class="flex items-center justify-between text-indigo-400 font-bold">
+                <span class="text-[11px] uppercase tracking-wider">{{ fact.title }}</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/20 border border-indigo-500/40">FACT #{{ idx + 1 }}</span>
+              </div>
+              <p class="text-slate-200 text-xs leading-relaxed font-sans font-medium">
+                {{ fact.statement }}
+              </p>
+            </div>
           </div>
 
-          <!-- Role Mirror Table -->
-          <div class="overflow-x-auto tactical-card rounded-2xl p-4 sm:p-6 max-w-4xl mx-auto">
-            <table class="w-full text-left font-mono text-xs">
-              <thead>
-                <tr class="border-b border-slate-800 text-slate-400 uppercase tracking-wider text-[11px]">
-                  <th class="pb-3 text-cyan-400">Facility Role</th>
-                  <th class="pb-3 text-red-400">Rebellion Mirror</th>
-                  <th class="pb-3 text-slate-300">Lore Relationship & Connection</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-800/80">
-                <tr v-for="(mirror, idx) in siteData.loreOverview.roleMirrors" :key="idx" class="hover:bg-facility-850/50">
-                  <td class="py-3 pr-4 font-bold text-cyan-300 whitespace-nowrap">{{ mirror.facility }}</td>
-                  <td class="py-3 pr-4 font-bold text-red-400 whitespace-nowrap">{{ mirror.rebel }}</td>
-                  <td class="py-3 text-slate-300 leading-relaxed">{{ mirror.notes }}</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- Official Discord Faction Hub Banner -->
+          <div class="tactical-card rounded-2xl p-6 sm:p-8 border-indigo-500/40 max-w-4xl mx-auto text-center space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-300 mx-auto">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold text-white uppercase">
+              Factions & Community Hub
+            </h3>
+            <p class="text-slate-300 text-sm max-w-xl mx-auto font-sans leading-relaxed">
+              {{ siteData.officialLore.discordInfo.text }}
+            </p>
+            <div class="pt-2">
+              <a
+                :href="siteData.officialLore.discordInfo.url"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold text-xs shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all"
+              >
+                <span>Join Official NBTF Discord (discord.gg/nbtf)</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -776,6 +789,8 @@
           </div>
           <div class="flex flex-wrap items-center gap-4">
             <a href="https://index.nbtf.ca" class="hover:text-cyan-400 transition-colors">Directory (index.nbtf.ca)</a>
+            <span class="text-slate-700">&bull;</span>
+            <a href="https://discord.gg/nbtf" target="_blank" class="hover:text-cyan-400 transition-colors">Official Discord</a>
             <span class="text-slate-700">&bull;</span>
             <a href="https://cbx.kiwi" target="_blank" class="hover:text-cyan-400 transition-colors">Maintainer (cbx.kiwi)</a>
             <span class="text-slate-700">&bull;</span>
@@ -844,7 +859,6 @@ const coolReactor = () => {
 
 const heatReactor = () => {
   if (!safetyOverrideActive.value && simTemperature.value >= 900000) {
-    // Safety system caps temperature unless overridden
     alert('SAFETY PROTOCOL ENGAGED: Reactor cannot exceed 900,000 K without terminal override codes!')
     return
   }

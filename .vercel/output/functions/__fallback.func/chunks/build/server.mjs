@@ -579,7 +579,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index--W-MDanD.mjs')
+    component: () => import('./index-bi6jRA-X.mjs')
   }
 ];
 const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {

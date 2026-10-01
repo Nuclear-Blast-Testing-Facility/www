@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     upstashRedisRestUrl: process.env.UPSTASH_REDIS_REST_URL || '',
     upstashRedisRestToken: process.env.UPSTASH_REDIS_REST_TOKEN || '',
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://web.nbtf.ca'
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.nbtf.ca'
     }
   },
   nitro: {

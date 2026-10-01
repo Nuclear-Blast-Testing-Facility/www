@@ -4,9 +4,10 @@ import Redis$1 from 'ioredis';
 
 const defaultWwwData = {
   siteTitle: "Nuclear Blast Testing Facility",
-  siteTagline: "The definitive intelligence dossier and operations reference for NBTF on Roblox",
-  heroDescription: "A secret nuclear testing facility operates a superheated fusion reactor and executes nuclear tests while military, security, and scientific personnel keep the facility operational. A rebel organisation attempts to infiltrate the facility, sabotage systems, and trigger a catastrophic core explosion.",
+  siteTagline: "Official gameplay dossier, 28-role guide, reactor mechanics, and official lore for NBTF on Roblox",
+  heroDescription: "A secret nuclear testing facility operates a powerful fusion reactor and conducts nuclear tests while military, security, government, and scientific personnel keep the facility operational. A rebel organisation attempts to infiltrate the facility, sabotage systems, and trigger a catastrophic core explosion.",
   robloxExperienceUrl: "https://www.roblox.com/games/6153709/Nuclear-Blast-Testing-Facility",
+  discordUrl: "https://discord.gg/nbtf",
   stats: {
     visits: "41.7M+",
     positiveRating: "88%+",
@@ -14,12 +15,48 @@ const defaultWwwData = {
     totalRoles: 28,
     creator: "Ryanblaze",
     corporation: "Pyrowh Corporation",
-    resistance: "Sharlach Resistance"
+    securityContractor: "Nevlar Arms"
   },
   bannerAlert: {
     enabled: true,
     level: "NOMINAL",
     message: "REACTOR CORE STABILITY: 99.8% \u2014 ALL PROTOCOLS ENFORCED. FACILITY AT STANDARD READINESS."
+  },
+  officialLore: {
+    developerNotice: "These are facts/statements about the NBTF universe that the developer/creator, Ryanblaze, has determined are accurate to the setting he wishes to create. You may ignore or contravene these statements, but these are the 'main points' of the NBTF universe, to help you out when making your own lore about the game!",
+    creator: "Ryanblaze",
+    facts: [
+      {
+        id: "fact-1",
+        title: "Site Location",
+        statement: "NBTF is located in Nevada, slightly north of the Extraterrestrial Highway."
+      },
+      {
+        id: "fact-2",
+        title: "Pyrowh Corporation",
+        statement: "The Pyrowh Corporation was founded in 1955."
+      },
+      {
+        id: "fact-3",
+        title: "Nevlar Arms",
+        statement: "Nevlar Arms provides security for the site, and funds the rebels that attack it."
+      },
+      {
+        id: "fact-4",
+        title: "Facility Secrecy",
+        statement: "The NBTF site is secret and inaccessible to most."
+      },
+      {
+        id: "fact-5",
+        title: "Time Period",
+        statement: "The NBTF game is set in the present day."
+      }
+    ],
+    discordInfo: {
+      text: "Factions and community lore are found and organized in the official Discord server.",
+      url: "https://discord.gg/nbtf",
+      displayUrl: "discord.gg/nbtf"
+    }
   },
   roles: [
     // Executive
@@ -41,9 +78,7 @@ const defaultWwwData = {
         "Hold authority over Facility Directors (including impeachment)",
         "Participate in executive-level nuclear launch authorizations"
       ],
-      equipment: ["Launch Keycard", "Executive ID", "Special Weapons Chamber Access", "Executive Vehicle"],
-      loreNotes: "Council Executives represent the Supreme Council. Banished or expelled executives historically become rebel Warlords.",
-      mirrorRole: "Warlord"
+      equipment: ["Launch Keycard", "Executive ID", "Special Weapons Chamber Access", "Executive Vehicle"]
     },
     {
       id: "facility-director",
@@ -62,9 +97,7 @@ const defaultWwwData = {
         "Final approval on high-level defensive operations",
         "Directing facility emergency protocols"
       ],
-      equipment: ["Level 6 Keycard", "Launch Keycard", "Director APC", "Director Sedan", "Executive Broadcast Dashboard"],
-      loreNotes: "Impeached or removed Directors historically seek revenge by joining the rebellion as Overseers.",
-      mirrorRole: "Overseer"
+      equipment: ["Level 6 Keycard", "Launch Keycard", "Director APC", "Director Sedan", "Executive Broadcast Dashboard"]
     },
     // Government
     {
@@ -83,8 +116,7 @@ const defaultWwwData = {
         "National security oversight",
         "Monitoring facility compliance and safety treaties"
       ],
-      equipment: ["Level 4 Keycard", "Government Sedan", "Government SUV"],
-      mirrorRole: "Hitman"
+      equipment: ["Level 4 Keycard", "Government Sedan", "Government SUV"]
     },
     {
       id: "intelligence-agent",
@@ -99,10 +131,9 @@ const defaultWwwData = {
       responsibilities: [
         "Gather internal intelligence",
         "Investigate suspicious personnel & counter espionage",
-        "Identify and neutralize hostile rebel covert assets"
+        "Identify and neutralize hostile covert assets"
       ],
-      equipment: ["Level 4 Keycard", "Covert Scanner", "Tactical Radio"],
-      mirrorRole: "Spy"
+      equipment: ["Level 4 Keycard", "Covert Scanner", "Tactical Radio"]
     },
     {
       id: "protection-service",
@@ -138,8 +169,7 @@ const defaultWwwData = {
         "Respond to core alarms and dangerous destabilization",
         "Perform emergency coolant injection procedures"
       ],
-      equipment: ["Level 3 Keycard", "Launch Keycard", "Hazmat Suit", "Core Diagnostic Tool"],
-      loreNotes: "Core Engineers are the direct frontline defense against the rebel core sabotage sequence."
+      equipment: ["Level 3 Keycard", "Launch Keycard", "Hazmat Suit", "Core Diagnostic Tool"]
     },
     {
       id: "rocket-scientist",
@@ -174,8 +204,7 @@ const defaultWwwData = {
         "Patrol strategic pathways & engage hostile rebel forces",
         "Defend personnel and maintain physical security"
       ],
-      equipment: ["M4 Carbine", "USP Pistol", "Level 3 Keycard", "Flashlight", "Radio", "Infantry Jeep"],
-      mirrorRole: "Raider"
+      equipment: ["M4 Carbine", "USP Pistol", "Level 3 Keycard", "Flashlight", "Radio", "Infantry Jeep"]
     },
     {
       id: "military-officer",
@@ -189,7 +218,7 @@ const defaultWwwData = {
       spawnLocation: "Military Barracks Officer Quarters",
       purpose: "Military tactical command and operational planning.",
       responsibilities: [
-        "Command military forces during base raids",
+        "Command military forces during base defense",
         "Plan tactical defensive operations",
         "Authorize heavy weapons response"
       ],
@@ -229,8 +258,7 @@ const defaultWwwData = {
         "Conduct specialized tactical strikes",
         "Retake breached core control rooms"
       ],
-      equipment: ["Level 4 Keycard", "Heavy Tactical Armor", "Advanced Rifle", "STF Tactical SUV"],
-      mirrorRole: "Commando"
+      equipment: ["Level 4 Keycard", "Heavy Tactical Armor", "Advanced Rifle", "STF Tactical SUV"]
     },
     // Security
     {
@@ -406,8 +434,7 @@ const defaultWwwData = {
         "Assault facility defensive strongpoints",
         "Eliminate high-value facility defenders"
       ],
-      equipment: ["Rebel Keycard", "Heavy Assault Rifle", "Combat Armor", "Explosives"],
-      mirrorRole: "Special Task Force"
+      equipment: ["Rebel Keycard", "Heavy Assault Rifle", "Combat Armor", "Explosives"]
     },
     {
       id: "hitman",
@@ -421,13 +448,11 @@ const defaultWwwData = {
       spawnLocation: "Rebel Base / Hidden Cave",
       purpose: "Contracted assassin targeting high-ranking facility personnel.",
       responsibilities: [
-        "Eliminate high-value targets (Director, Council, Officials)",
+        "Eliminate designated high-value targets",
         "Conduct clandestine infiltration strikes",
         "Operate independently under bounty contracts"
       ],
-      equipment: ["Rebel Keycard", "Silenced Sniper / Pistol", "Infiltration Cloak"],
-      loreNotes: "Hitmen are hired mercenary guns rather than ideological members of the Sharlach Resistance.",
-      mirrorRole: "Government Official"
+      equipment: ["Rebel Keycard", "Silenced Sniper / Pistol", "Infiltration Cloak"]
     },
     {
       id: "overseer",
@@ -445,9 +470,7 @@ const defaultWwwData = {
         "Coordinate reactor sabotage sequences and terminal code gathering",
         "Guide assault teams toward weak points"
       ],
-      equipment: ["Rebel Master Card", "Rebel Command Terminal", "Tactical Map"],
-      loreNotes: "Overseers are former Facility Directors removed by the Supreme Council who now direct resistance intelligence.",
-      mirrorRole: "Facility Director"
+      equipment: ["Rebel Master Card", "Rebel Command Terminal", "Tactical Map"]
     },
     {
       id: "raid-leader",
@@ -465,8 +488,7 @@ const defaultWwwData = {
         "Coordinate breaches into the Core and SCC",
         "Call targets and rally combatants"
       ],
-      equipment: ["Rebel Keycard", "Command Radio", "Assault Loadout"],
-      mirrorRole: "Security Supervisor"
+      equipment: ["Rebel Keycard", "Command Radio", "Assault Loadout"]
     },
     {
       id: "raider",
@@ -483,8 +505,7 @@ const defaultWwwData = {
         "Capture strategic control points",
         "Provide fire support during core infiltration"
       ],
-      equipment: ["AK-47 / SMG", "Rebel Keycard", "Flashlight"],
-      mirrorRole: "Infantry Soldier"
+      equipment: ["AK-47 / SMG", "Rebel Keycard", "Flashlight"]
     },
     {
       id: "spy",
@@ -498,12 +519,10 @@ const defaultWwwData = {
       purpose: "Covert undercover infiltrator operating inside facility lines.",
       responsibilities: [
         "Infiltrate facility disguised in civilian or worker gear",
-        "Access terminals and steal override code fragments",
+        "Access terminals and obtain override code fragments",
         "Sabotage systems from deep within without detection"
       ],
-      equipment: ["Disguise Kit", "Hacking Decryption Tool", "Silenced Sidearm"],
-      loreNotes: "Creates a direct social infiltration loop inside the facility.",
-      mirrorRole: "Intelligence Agent"
+      equipment: ["Disguise Kit", "Hacking Decryption Tool", "Silenced Sidearm"]
     },
     {
       id: "warlord",
@@ -515,15 +534,13 @@ const defaultWwwData = {
       isPaid: true,
       costRobux: 1700,
       spawnLocation: "Rebel Base Throne",
-      purpose: "Supreme military commander of the Sharlach Resistance.",
+      purpose: "Supreme military commander of the rebellion.",
       responsibilities: [
-        "Lead all rebellion armed forces in total war",
-        "Formulate grand strategic invasion doctrine",
-        "Authorize full-scale reactor core destruction operations"
+        "Lead all rebellion armed forces in organized assaults",
+        "Formulate grand strategic raid operations",
+        "Authorize full-scale reactor core sabotage operations"
       ],
-      equipment: ["Warlord Heavy Armor", "Warlord Custom Weaponry", "Rebel Master Key"],
-      loreNotes: "Warlords are former Supreme Council Executives expelled from NBTF who now seek total destruction of the Pyrowh Corporation.",
-      mirrorRole: "Council Executive"
+      equipment: ["Warlord Heavy Armor", "Warlord Custom Weaponry", "Rebel Master Key"]
     },
     // Neutral
     {
@@ -538,11 +555,10 @@ const defaultWwwData = {
       purpose: "Independent wanderer and survivor in NBTF territory.",
       responsibilities: [
         "Explore the facility perimeter and external landmarks",
-        "Survive ongoing clashes between Pyrowh and Sharlach forces",
+        "Survive ongoing clashes between facility forces and rebels",
         "Choose whether to cooperate or remain neutral"
       ],
-      equipment: ["Civilian Clothes", "Flashlight"],
-      loreNotes: "The civilian role embodies the experience of an independent bystander navigating the nuclear territory."
+      equipment: ["Civilian Clothes", "Flashlight"]
     }
   ],
   locations: [
@@ -551,8 +567,8 @@ const defaultWwwData = {
       name: "Energy Generation Center (EGC) & Reactor Core",
       category: "Science & Reactor",
       clearanceRequired: "Level 3 (Level 4+ for Control Room)",
-      description: "The beating heart of NBTF. Houses the superheated fusion reactor core, coolant injection pipelines, and safety override panels.",
-      associatedRoles: ["Core Engineer", "Facility Director", "Rebel Saboteurs"],
+      description: "The central installation of NBTF. Houses the fusion reactor core, coolant injection pipelines, and safety override panels.",
+      associatedRoles: ["Core Engineer", "Facility Director", "Rebels"],
       keyFeatures: ["Superheated Plasma Core", "Coolant Flow Valving", "Master Safety Override Panel", "180s Meltdown Alarm"]
     },
     {
@@ -611,10 +627,10 @@ const defaultWwwData = {
     },
     {
       id: "rebel-base",
-      name: "Sharlach Resistance Rebel Base & Hidden Cave",
+      name: "Rebel Base & Hidden Cave",
       category: "Exterior",
       clearanceRequired: "Rebel Card",
-      description: "Fortified rebel bunker hidden in the surrounding badlands where raids are planned, and weapons stockpiled.",
+      description: "Fortified rebel bunker hidden in the surrounding badlands where raids are planned and weapons stockpiled.",
       associatedRoles: ["Warlord", "Overseer", "Raid Leader", "Commando", "Raider", "Spy", "Hitman"],
       keyFeatures: ["War Room", "Armory Spawns", "Underground Escape Tunnels", "Rebel Gas Outpost"]
     }
@@ -638,23 +654,9 @@ const defaultWwwData = {
     { name: "Raid Leader", role: "Rebel Command", robux: 800, description: "Grants squad command radio and organized raid leadership gear." },
     { name: "Warlord", role: "Rebel Supreme Leader", robux: 1700, description: "Supreme rebel leadership role, heavy armor, and master rebel access." },
     { name: "Council Executive", role: "Supreme Council", robux: 2e3, description: "Senior Supreme Council seat with impeachment and launch power." },
-    { name: "Overseer", role: "Rebel Intelligence Head", robux: 3e3, description: "Former Director commanding rebel sabotage intelligence." },
+    { name: "Overseer", role: "Rebel Intelligence Head", robux: 3e3, description: "Rebel strategic mastermind directing sabotage intelligence." },
     { name: "Facility Director", role: "Supreme Facility Head", robux: 3400, description: "Highest operational facility authority with Level 6 clearance." }
-  ],
-  loreOverview: {
-    facilityFaction: "Pyrowh Corporation",
-    rebelFaction: "Sharlach Resistance",
-    backstory: "The Pyrowh Corporation operates the Nuclear Blast Testing Facility under strict military and governmental contracts, harnessing superheated plasma reactors and developing experimental nuclear warheads. The Sharlach Resistance, formed by disenfranchised former facility executives, banished directors, and freedom fighters, wages asymmetric war to dismantle the facility and breach its reactor core.",
-    roleMirrors: [
-      { facility: "Facility Director (L6)", rebel: "Overseer (Rebel Mastermind)", notes: "Overseers are canonically former Facility Directors removed or impeached by the Supreme Council." },
-      { facility: "Council Executive (L5)", rebel: "Warlord (Supreme Rebel Commander)", notes: "Warlords are banished former Supreme Council Executives seeking total annihilation of Pyrowh." },
-      { facility: "Special Task Force (L4)", rebel: "Commando (Elite Raider)", notes: "Direct tactical mirrors in combat armor, weaponry, and breaching capabilities." },
-      { facility: "Intelligence Agent (L4)", rebel: "Spy (Undercover Saboteur)", notes: "The cat-and-mouse game of counter-espionage vs covert terminal infiltration." },
-      { facility: "Infantry Soldier (L3)", rebel: "Raider (Frontline Combat)", notes: "The backbone combat forces engaging in perimeter and hallway firefights." },
-      { facility: "Security Supervisor (L4)", rebel: "Raid Leader (Assault Coordinator)", notes: "Tactical leaders directing team movements and security lockdowns." },
-      { facility: "Government Official (L4)", rebel: "Hitman (Contracted Assassin)", notes: "VIP political interests vs clandestine contract elimination." }
-    ]
-  }
+  ]
 };
 
 const REDIS_WWW_KEY = "nbtf:www:data";
